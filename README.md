@@ -1,79 +1,61 @@
-Clustering de Jugadores de FIFA 18
-¡Bienvenido a este proyecto de análisis y clustering de jugadores del popular videojuego FIFA 18! ⚽🎮
+Clustering de Jugadores de FIFA 18 ⚽🎮
+¿Recuerdas el FIFA 18? Ese famoso videojuego de fútbol donde cada jugador está detallado con un montón de características que reflejan su rendimiento y estilo en la cancha. En este proyecto, vamos a sumergirnos en el universo de los jugadores de FIFA 18 para descubrir grupos o "clusters" de jugadores basados en sus habilidades y atributos.
 
-Descripción
-En este proyecto nos sumergimos en el universo de FIFA 18 para explorar un dataset con información detallada de miles de jugadores de las ligas más importantes del mundo. Cada jugador tiene un perfil extenso con características como edad, nacionalidad, club, valor de mercado, salario, y atributos técnicos como agilidad, tiros libres, aceleración, equilibrio y posiciones en el campo.
+¿De qué va este proyecto?
+El dataset contiene datos súper detallados de más de 17,000 jugadores, incluyendo:
 
-El objetivo principal es aplicar técnicas de clustering para descubrir grupos o segmentos naturales entre los jugadores y entender qué características los agrupan. Así podemos responder preguntas como:
+Nombre, edad, y nacionalidad
 
-¿Existen grupos claros de jugadores según su estilo de juego o atributos?
+Club y posición en el campo (por ejemplo, CAM, CB, CF)
 
-¿Qué diferencia a un jugador defensor de un delantero a nivel de atributos técnicos?
+Valor de mercado y salario
 
-¿Cómo se agrupan los jugadores según su valor y desempeño?
+Características técnicas y físicas como agilidad, control del balón, precisión en tiros libres, velocidad, fuerza y muchas más
 
-Dataset
-El dataset utilizado proviene de FIFA 18 y contiene más de 17,000 registros con aproximadamente 75 columnas por jugador. Algunas de las variables más importantes incluyen:
+Objetivo
+Utilizando técnicas de clustering, queremos descubrir si existen patrones naturales que agrupen a los jugadores según sus habilidades, estilos de juego o posiciones en el campo.
 
-Name: Nombre del jugador
-
-Age: Edad
-
-Nationality: País de origen
-
-Club: Equipo en el que juega
-
-Value: Precio de mercado (convertido a valores numéricos)
-
-Wage: Salario semanal
-
-Atributos técnicos: Aceleración, agilidad, control de balón, precisión en tiros libres, etc.
-
-Posiciones: CAM, CB, CDM, CF, CM, y más
+¿Podremos identificar grupos que representen, por ejemplo, a jugadores con alta velocidad y agilidad, o a defensores robustos con buen salto y marcación?
 
 Proceso
-Limpieza y preparación de datos
+Limpieza y preparación de datos:
 
-Eliminación de columnas irrelevantes (como URLs de fotos o logos).
+Convertimos valores de salarios y precios de mercado de formato texto a números (miles y millones).
 
-Conversión de valores monetarios de formato texto a numérico (millones y miles).
+Eliminamos jugadores sin valor comercial.
 
-Eliminación de jugadores con valor 0 para evitar ruido en el análisis.
+Seleccionamos las características relevantes para el análisis.
 
-Selección de características
+Análisis exploratorio:
+Visualizamos distribuciones y correlaciones para entender mejor los datos.
 
-Selección de variables numéricas relevantes para clustering, enfocándonos en atributos técnicos y físicos.
+Estandarización:
+Escalamos las variables para que tengan igual peso en el clustering.
 
-Análisis exploratorio
+Clustering con K-Means:
 
-Visualización y descripción estadística para entender la distribución de los datos.
+Determinamos el número óptimo de clusters.
 
-Aplicación de clustering
+Aplicamos K-Means para agrupar jugadores.
 
-Escalamiento de datos con StandardScaler.
-
-Uso de PCA para reducción de dimensionalidad y visualización.
-
-Uso de K-Means para agrupar jugadores en clusters basados en sus atributos.
-
-Interpretación
-
-Análisis de cada cluster para identificar qué los caracteriza.
-
-Interpretación en términos de posiciones, valor de mercado y características técnicas.
-
-Resultados esperados
-Identificación de grupos diferenciados de jugadores (por ejemplo, defensores con alta resistencia y fuerza, delanteros con alta precisión y velocidad, etc.).
-
-Visualizaciones que faciliten la interpretación y presentación de los clusters.
-
-Insights útiles para scouts, entrenadores, o analistas de fútbol para entender mejor las características que definen distintos tipos de jugadores.
+Análisis y visualización de clusters:
+Interpretamos cada grupo para entender qué define a sus jugadores.
 
 Tecnologías y librerías usadas
-Python 3.x
+Python
 
-pandas, numpy (manejo y limpieza de datos)
+Pandas, NumPy
 
-seaborn, matplotlib (visualización)
+Scikit-learn (K-Means, StandardScaler, PCA)
 
-scikit-learn (preprocesamiento, PCA, K-Means clustering)
+Matplotlib y Seaborn para visualizaciones
+
+¿Por qué es interesante?
+Este proyecto combina análisis de datos deportivos con técnicas de machine learning no supervisado, aportando insights que pueden usarse para scouting, estrategias de equipo o simplemente para entender mejor el mundo del fútbol a nivel estadístico.
+
+Además, es una excelente práctica para manejar datos reales, limpieza, transformación y análisis avanzado.
+
+¿Quieres ver más?
+Explora el código, los gráficos y los resultados para descubrir qué tipos de jugadores existen en FIFA 18 y cómo se agrupan según sus habilidades. ¡Tal vez te sorprendas con los hallazgos!
+
+Si te gusta el fútbol y la data, este proyecto es para ti. ⚽📊
